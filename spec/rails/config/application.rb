@@ -4,8 +4,6 @@ require 'active_model/railtie'
 require 'action_controller/railtie'
 require 'action_view/railtie'
 
-require_relative 'errors'
-
 module Devise
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
