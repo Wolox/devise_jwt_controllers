@@ -11,11 +11,11 @@ module ActionDispatch
 
       def default_devise_jwt_controllers
         {
-          confirmations: 'devise/jwt/confirmations',
-          passwords: 'devise/jwt/passwords',
-          registrations: 'devise/jwt/registrations',
-          sessions: 'devise/jwt/sessions',
-          unlocks: 'devise/jwt/unlocks'
+          confirmations: 'devise/j_w_t/confirmations',
+          passwords: 'devise/j_w_t/passwords',
+          registrations: 'devise/j_w_t/registrations',
+          sessions: 'devise/j_w_t/sessions',
+          unlocks: 'devise/j_w_t/unlocks'
         }
       end
     end

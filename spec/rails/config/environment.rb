@@ -4,3 +4,5 @@ require_relative 'environments/test'
 
 # Initialize the Rails application.
 Rails.application.initialize!
+
+require_relative 'initializers/devise'

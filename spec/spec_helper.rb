@@ -13,11 +13,14 @@ require 'rspec/rails'
 
 SimpleCov.start
 
-# Load default config (devise_jwt_controllers included!)
+ActiveRecord::Migration.maintain_test_schema!
+
+# Load default config
 Bundler.require(:default)
 
 RSpec.configure do |config|
   config.include ActionDispatch::TestProcess
+  config.include Devise::Test::ControllerHelpers, type: :controller
 
   config.infer_spec_type_from_file_location!
 

@@ -5,6 +5,10 @@ require 'active_record/railtie'
 require 'action_controller/railtie'
 require 'action_view/railtie'
 
+require 'devise'
+require 'devise/jwt'
+require 'devise_jwt_controllers'
+
 module Devise
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
