@@ -5,6 +5,6 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :confirmable, :lockable, :timeoutable,
-         :recoverable, :rememberable, :validatable, :trackable,
+         :recoverable, :validatable, :trackable,
          :jwt_authenticatable, jwt_revocation_strategy: self
 end

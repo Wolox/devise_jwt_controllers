@@ -13,6 +13,20 @@ describe Devise::JWT::RegistrationsController do
     include_examples 'devise removed action examples'
   end
 
+  describe 'GET #edit' do
+    subject(:make_request) { get :edit }
+
+    context 'when an account is signed in' do
+      include_context 'with user logged in'
+
+      include_examples 'devise removed action examples'
+    end
+
+    context 'when no account is signed in' do
+      include_context 'unauthorized user examples'
+    end
+  end
+
   describe 'POST #create' do
     subject(:make_request) { post :create, params: params }
 
@@ -40,6 +54,26 @@ describe Devise::JWT::RegistrationsController do
       it 'does not create a new user' do
         expect { make_request }.not_to change(User, :count)
       end
+    end
+  end
+
+  describe 'DELETE #destroy' do
+    subject(:make_request) { delete :destroy }
+
+    context 'when an account is signed in' do
+      include_context 'with user logged in'
+
+      before do
+        make_request
+      end
+
+      it 'responds with no content status' do
+        expect(response).to have_http_status(:no_content)
+      end
+    end
+
+    context 'when no account is signed in' do
+      include_context 'unauthorized user examples'
     end
   end
 end

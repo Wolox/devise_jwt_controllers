@@ -1,6 +1,8 @@
 module Devise
   module JWT
     class BaseController < ApplicationController
+      include ActionController::MimeResponds
+
       def respond_with(resource, _opts = {})
         if resource.valid?
           render json: resource, status: :created

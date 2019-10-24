@@ -4,6 +4,7 @@ module ActionDispatch
       def devise_jwt_for(*resources)
         options = resources.extract_options!
         options[:controllers] = default_devise_jwt_controllers.merge(options[:controllers] || {})
+        options[:defaults] = { format: :json }.merge(options[:defaults] || {})
         devise_for(*resources, options)
       end
 
