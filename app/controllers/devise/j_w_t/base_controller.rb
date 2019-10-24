@@ -2,7 +2,11 @@ module Devise
   module JWT
     class BaseController < ApplicationController
       def respond_with(resource, _opts = {})
-        render json: resource, status: resource.valid? ? :created : :unprocessable_entity
+        if resource.valid?
+          render json: resource, status: :created
+        else
+          render json: resource.errors, status: :unprocessable_entity
+        end
       end
 
       def respond_to_on_destroy
