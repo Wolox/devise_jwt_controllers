@@ -6,7 +6,7 @@ require 'action_view/railtie'
 
 require_relative 'errors'
 
-module Fictium
+module Devise
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
