@@ -8,6 +8,7 @@ Bundler.require(:development, :test)
 
 require 'rails/config/environment'
 require 'rails/config/routes'
+require 'rails/db/schema'
 
 require 'rspec/rails'
 
