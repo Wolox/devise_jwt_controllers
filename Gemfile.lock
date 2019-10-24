@@ -201,6 +201,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sqlite3 (1.4.1)
     thor (0.20.3)
     thread_safe (0.3.6)
     tzinfo (1.2.5)
@@ -234,6 +235,7 @@ DEPENDENCIES
   rubocop-rails (= 2.3.2)
   rubocop-rspec (= 1.36.0)
   simplecov (~> 0.17.0)
+  sqlite3 (~> 1.4.1)
 
 BUNDLED WITH
    2.0.2
