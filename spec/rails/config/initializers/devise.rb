@@ -1,6 +1,8 @@
 Devise.setup do |config|
   config.secret_key = '57b5d0a02bc1e025c5077d9a62d329f66432ba975d3'
 
+  config.mailer_sender = 'no-reply2@jwt.com'
+
   require 'devise/orm/active_record'
 
   config.case_insensitive_keys = [:email]

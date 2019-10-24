@@ -44,6 +44,8 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
 
   spec.add_development_dependency 'sqlite3', '~> 1.4.1'
 
+  spec.add_development_dependency 'database_cleaner', '~> 1.7.0'
+  spec.add_development_dependency 'factory_bot_rails', '~> 5.1.1'
   spec.add_development_dependency 'rake', '~> 12.3.3'
   spec.add_development_dependency 'rspec', '~> 3.9'
   spec.add_development_dependency 'rspec-rails', '~> 3.9'
