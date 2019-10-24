@@ -12,6 +12,10 @@ module Devise
       def respond_to_on_destroy
         head :no_content
       end
+
+      def respond_to_removed_action
+        head :not_found
+      end
     end
   end
 end

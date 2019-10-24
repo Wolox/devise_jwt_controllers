@@ -12,6 +12,9 @@ require 'rails/db/schema'
 
 require 'rspec/rails'
 
+require_relative 'support/shared_contexts'
+require_relative 'support/shared_examples'
+
 SimpleCov.start
 
 ActiveRecord::Migration.maintain_test_schema!

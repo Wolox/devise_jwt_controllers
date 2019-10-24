@@ -4,7 +4,7 @@ module Devise
       respond_to :json
 
       def new
-        render json: nil, status: :not_found
+        respond_to_removed_action
       end
     end
   end
