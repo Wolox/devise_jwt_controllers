@@ -1,6 +1,7 @@
 ENV['RAILS_ENV'] = 'development'
 
 require 'bundler/setup'
+require 'rails'
 
 # Load GEM dependencies first
 Bundler.require(:development, :test)
