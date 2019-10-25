@@ -8,7 +8,7 @@ Devise.setup do |config|
   config.case_insensitive_keys = [:email]
   config.strip_whitespace_keys = [:email]
 
-  config.skip_session_storage = [:http_auth]
+  config.skip_session_storage = %i[http_auth params_auth]
 
   config.stretches = Rails.env.test? ? 1 : 11
 
@@ -25,4 +25,8 @@ Devise.setup do |config|
   end
 
   config.navigational_formats = []
+end
+
+Warden::JWTAuth.configure do |config|
+  config.mappings = { user: User }
 end

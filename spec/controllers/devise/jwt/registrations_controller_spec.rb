@@ -60,6 +60,8 @@ describe Devise::JWT::RegistrationsController do
   describe 'DELETE #destroy' do
     subject(:make_request) { delete :destroy }
 
+    let(:auth_headers) { {} }
+
     context 'when an account is signed in' do
       include_context 'with user logged in'
 

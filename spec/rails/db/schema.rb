@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2019_10_21_165331) do # rubocop:disable Sty
     t.integer 'failed_attempts', default: 0, null: false
     t.string 'unlock_token'
     t.datetime 'locked_at'
-    t.string 'jti', null: false
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
     t.index ['confirmation_token'], name: 'index_users_on_confirmation_token', unique: true
