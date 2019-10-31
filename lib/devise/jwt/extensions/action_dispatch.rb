@@ -23,7 +23,6 @@ module ActionDispatch
 
       def add_mappings(model)
         Warden::JWTAuth.configure do |config|
-
           config.mappings = { model_sym(model) => model_class(model) }
           config.revocation_strategies = {
             model_sym(model) => model_class(model).jwt_revocation_strategy

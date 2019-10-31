@@ -15,7 +15,7 @@ describe Devise::JWT::RegistrationsController do
 
   describe 'GET #edit' do
     subject(:make_request) do
-      get :edit 
+      get :edit
     end
 
     context 'when an account is signed in' do

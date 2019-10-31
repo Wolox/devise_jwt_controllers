@@ -12,4 +12,3 @@ shared_context 'with user logged in' do
     request.headers.merge!(auth_headers)
   end
 end
-
