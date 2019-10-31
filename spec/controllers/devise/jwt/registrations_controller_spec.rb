@@ -15,8 +15,6 @@ describe Devise::JWT::RegistrationsController do
 
   describe 'GET #edit' do
     subject(:make_request) do
-      # auth = auth_headers
-      # request.headers.merge! auth
       get :edit 
     end
 
