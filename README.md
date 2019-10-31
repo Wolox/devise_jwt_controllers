@@ -41,11 +41,11 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 ## About
-This project was developed by [Leon Calermo](leoncalermo) and [Ramiro Rojo](https://github.com/holywyvern).
+This project was developed by [Leon Calermo](leoncalermo) and [Ramiro Rojo](https://github.com/Wolox).
 
 Maintainers: [Leon Calermo](leoncalermo)
 
-Contributors: [Ramiro Rojo](https://github.com/holywyvern)
+Contributors: [Ramiro Rojo](https://github.com/Wolox)
 
 ![Wolox](https://raw.githubusercontent.com/Wolox/press-kit/master/logos/logo_banner.png)
 
