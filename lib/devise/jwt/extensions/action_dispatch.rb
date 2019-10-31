@@ -5,7 +5,7 @@ module ActionDispatch
         options = resources.extract_options!
         options[:controllers] = default_devise_jwt_controllers.merge(options[:controllers] || {})
         options[:defaults] = { format: :json }.merge(options[:defaults] || {})
-        ::WardenConfig.new.add_mappings(*resources)
+        Devise::JWT::WardenHelper.add_mappings(*resources)
         devise_for(*resources, options)
       end
 
