@@ -14,6 +14,10 @@ module Devise
       def cancel
         respond_to_removed_action
       end
+
+      def destroy
+        respond_to_on_destroy
+      end
     end
   end
 end

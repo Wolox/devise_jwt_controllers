@@ -14,7 +14,11 @@ describe Devise::JWT::RegistrationsController do
   end
 
   describe 'GET #edit' do
-    subject(:make_request) { get :edit }
+    subject(:make_request) do
+      # auth = auth_headers
+      # request.headers.merge! auth
+      get :edit 
+    end
 
     context 'when an account is signed in' do
       include_context 'with user logged in'
@@ -24,6 +28,13 @@ describe Devise::JWT::RegistrationsController do
 
     context 'when no account is signed in' do
       include_context 'unauthorized user examples'
+      before do
+        make_request
+      end
+
+      it 'responds with unauthorized status' do
+        expect(response).to have_http_status(:unauthorized)
+      end
     end
   end
 
@@ -59,8 +70,6 @@ describe Devise::JWT::RegistrationsController do
 
   describe 'DELETE #destroy' do
     subject(:make_request) { delete :destroy }
-
-    let(:auth_headers) { {} }
 
     context 'when an account is signed in' do
       include_context 'with user logged in'
