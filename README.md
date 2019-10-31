@@ -1,8 +1,6 @@
 # DeviseJwtControllers
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/devise_jwt_controllers`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem add devise-jwt JSON-like controllers to your application.
 
 ## Installation
 
@@ -22,7 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Setup [devise](https://github.com/plataformatec/devise) an [devise-jwt](https://github.com/waiting-for-dev/devise-jwt) as normal.
+
+You then just replace your `devise_for` in `config/routes.rb` with `devise_jwt_for`.
+
+`devise_jwt_for` accepts the same arguments as `devise_for`, and configurations.
 
 ## Development
 
@@ -37,6 +39,15 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## About
+This project was developed by [Leon Calermo](leoncalermo) and [Ramiro Rojo](https://github.com/holywyvern).
+
+Maintainers: [Leon Calermo](leoncalermo)
+
+Contributors: [Ramiro Rojo](https://github.com/holywyvern)
+
+![Wolox](https://raw.githubusercontent.com/Wolox/press-kit/master/logos/logo_banner.png)
 
 ## Code of Conduct
 
