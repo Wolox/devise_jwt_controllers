@@ -6,13 +6,9 @@ end
 
 shared_context 'with user logged in' do
   let(:current_user) { create(:user, confirmed_at: Time.zone.now) }
-
-  let(:auth_headers) do
-    request.headers.merge!(Accept: 'application/json')
-    Devise::JWT::TestHelpers.auth_headers(request.headers, current_user)
-  end
-
   before do
-    auth_headers
+    headers = { 'Accept' => 'application/json', 'Content-Type' => 'application/json' }
+    auth_headers = Devise::JWT::TestHelpers.auth_headers(headers, current_user)
+    request.headers.merge!(auth_headers)
   end
 end
