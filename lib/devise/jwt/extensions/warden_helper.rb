@@ -2,12 +2,16 @@ module Devise
   module JWT
     module WardenHelper
       class << self
-        def add_mappings(model)
+        def add_mappings(*models)
           Warden::JWTAuth.configure do |config|
-            config.mappings = { model_sym(model) => model_class(model) }
-            config.revocation_strategies = {
-              model_sym(model) => model_class(model).jwt_revocation_strategy
-            }
+            config.mappings ||= {}
+            config.revocation_strategies ||= {}
+            models.each do |model|
+              config.mappings.merge!(model_sym(model) => model_class(model))
+              config.revocation_strategies.merge!(
+                model_sym(model) => model_class(model).jwt_revocation_strategy
+              )
+            end
           end
         end
 
