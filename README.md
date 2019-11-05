@@ -47,7 +47,9 @@ Maintainers: [Leon Calermo](https://github.com/leoncalermo)
 
 Contributors: [Ramiro Rojo](https://github.com/holywyvern)
 
-![Wolox](https://raw.githubusercontent.com/Wolox/press-kit/master/logos/logo_banner.png)
+This gem is eveloped at [Wolox]((http://www.wolox.com.ar)):
+
+[![Wolox](https://raw.githubusercontent.com/Wolox/press-kit/master/logos/logo_banner.png)]((http://www.wolox.com.ar))
 
 ## Code of Conduct
 
