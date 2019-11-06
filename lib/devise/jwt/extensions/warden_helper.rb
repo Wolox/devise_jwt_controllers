@@ -17,10 +17,9 @@ module Devise
         def map_model(config, model)
           class_value = model_class(model)
           symbol = model_sym(model)
-          config.mappings.merge!(symbol => class_value, model => class_value)
+          config.mappings.merge!(symbol => class_value)
           config.revocation_strategies.merge!(
-            symbol => model_class(model).jwt_revocation_strategy,
-            model => class_value
+            symbol => model_class(model).jwt_revocation_strategy
           )
         end
 
