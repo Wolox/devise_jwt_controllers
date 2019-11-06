@@ -41,7 +41,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 ## About
-This project was developed by [Leon Calermo](leoncalermo) and [Ramiro Rojo](https://github.com/leoncalermo).
+This project was developed by [Leon Calermo](leoncalermo) and [Ramiro Rojo](https://github.com/holywyvern).
 
 Maintainers: [Leon Calermo](https://github.com/leoncalermo)
 
