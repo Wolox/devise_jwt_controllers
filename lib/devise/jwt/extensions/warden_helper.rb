@@ -4,23 +4,31 @@ module Devise
       class << self
         def add_mappings(*models)
           Warden::JWTAuth.configure do |config|
-            config.mappings ||= {}
+            config.mappings = {}
             config.revocation_strategies ||= {}
             models.each do |model|
-              map_model(config, model)
+              map_model(model)
             end
+            config.mappings = mappings
+            config.revocation_strategies = revocations
           end
         end
 
         private
 
-        def map_model(config, model)
+        def map_model(model)
           class_value = model_class(model)
           symbol = model_sym(model)
-          config.mappings.merge!(symbol => class_value)
-          config.revocation_strategies.merge!(
-            symbol => model_class(model).jwt_revocation_strategy
-          )
+          mappings.merge!(symbol => class_value)
+          revocations.merge!(symbol => model_class(model).jwt_revocation_strategy)
+        end
+
+        def mappings
+          @mappings ||= {}
+        end
+
+        def revocations
+          @revocations ||= {}
         end
 
         def model_class(model)
