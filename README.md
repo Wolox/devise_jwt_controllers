@@ -1,5 +1,7 @@
 # DeviseJwtControllers
 
+[![Build Status](https://travis-ci.org/Wolox/devise_jwt_controllers.svg?branch=development-1.x.x)](https://travis-ci.org/Wolox/devise_jwt_controllers) [![Maintainability](https://api.codeclimate.com/v1/badges/d37c76dac875775e487d/maintainability)](https://codeclimate.com/github/Wolox/devise_jwt_controllers/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/d37c76dac875775e487d/test_coverage)](https://codeclimate.com/github/Wolox/devise_jwt_controllers/test_coverage)
+
 This gem add devise-jwt JSON-like controllers to your application.
 
 ## Installation
