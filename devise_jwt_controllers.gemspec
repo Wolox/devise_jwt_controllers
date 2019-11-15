@@ -5,8 +5,8 @@ require 'devise/jwt/controllers/version'
 Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.name          = 'devise_jwt_controllers'
   spec.version       = Devise::JWT::Controllers::VERSION
-  spec.authors       = ['Ramiro Rojo']
-  spec.email         = ['ramiro.rojo@wolox.com.ar']
+  spec.authors       = ['Ramiro Rojo', 'David Leon Calermo']
+  spec.email         = ['ramiro.rojo@wolox.com.ar', 'leon.calermo@wolox.com.ar']
 
   spec.summary       = 'A gem to generate documentation out of tests.'
   spec.homepage      = 'https://github.com/Wolox/devise_jwt_controllers'
