@@ -17,6 +17,14 @@
 
 ## LOG
 
+### 0.1.1 ([2019-11-15])
+
+Fix JWT inflections
+
+#### Changes
+
+- Fix trouble with finding JWT as a constant.
+
 ### 0.1.0 ([2019-11-14])
 
 Initial release

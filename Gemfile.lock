@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    devise_jwt_controllers (0.1.0)
+    devise_jwt_controllers (0.1.1)
       devise (~> 4.7.1)
       devise-jwt (~> 0.6.0)
       rails (>= 5.2.0, < 6.1)
