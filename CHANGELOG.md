@@ -17,7 +17,7 @@
 
 ## LOG
 
-### 0.1.3 ([2019-11-19])
+### 0.1.3 (2019-11-19)
 
 Add navigational formats
 
@@ -26,7 +26,7 @@ Add navigational formats
 - Makes json the default navigational format.
 
 
-### 0.1.2 ([2019-11-15])
+### 0.1.2 (2019-11-15)
 
 Add Authors
 
@@ -34,7 +34,7 @@ Add Authors
 
 - Added Leon Calermo as Author.
 
-### 0.1.1 ([2019-11-15])
+### 0.1.1 (2019-11-15)
 
 Fix JWT inflections
 
@@ -42,7 +42,7 @@ Fix JWT inflections
 
 - Fix trouble with finding JWT as a constant.
 
-### 0.1.0 ([2019-11-14])
+### 0.1.0 (2019-11-14)
 
 Initial release
 
