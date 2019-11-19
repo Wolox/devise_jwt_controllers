@@ -1,5 +1,6 @@
 Devise.setup do |config|
   config.parent_controller = 'Devise::JWT::BaseController'
+  config.navigational_formats = %i[json]
 end
 
 module Devise
