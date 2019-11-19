@@ -17,6 +17,14 @@
 
 ## LOG
 
+### 0.1.3 ([2019-11-19])
+
+Add navigational formats
+
+#### Changes
+
+- Makes json the default navigational format.
+
 ### 0.1.1 ([2019-11-15])
 
 Fix JWT inflections
