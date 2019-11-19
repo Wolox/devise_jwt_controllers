@@ -28,6 +28,19 @@ You then just replace your `devise_for` in `config/routes.rb` with `devise_jwt_f
 
 `devise_jwt_for` accepts the same arguments as `devise_for`, and configurations.
 
+If you are only planning to use it as an API only, remember to configure devise to respond only to JSON:
+
+
+In your `config/initializers/devise.rb` add:
+
+```rb
+config.jwt do |jwt|
+  jwt.secret = 'Some secret key'
+end
+
+config.navigational_formats = %i[json]
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
