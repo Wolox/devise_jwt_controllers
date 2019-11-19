@@ -25,6 +25,15 @@ Add navigational formats
 
 - Makes json the default navigational format.
 
+
+### 0.1.2 ([2019-11-15])
+
+Add Authors
+
+#### Changes
+
+- Added Leon Calermo as Author.
+
 ### 0.1.1 ([2019-11-15])
 
 Fix JWT inflections
