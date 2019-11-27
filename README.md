@@ -41,6 +41,41 @@ end
 config.navigational_formats = %i[json]
 ```
 
+## Quick start
+-   Add `gem 'devise_jwt_controllers’` to your gemfile    
+-   Install devise using `rails generate devise:install`. If this doesn't work, remove previous devise files (particularly if you were using devise_token_auth)
+-   If you don’t have a configured devise model already, use `rails generate devise User`
+-   Run migrations using `rails db:migrate`(if the table already exists, remember to check the migration for possible conflicts)
+-   Add the needed configuration for devise jwt in `initializers/devise.rb`
+```
+Devise.setup do |config|
+  config.jwt do |jwt|
+    jwt.secret = ENV['DEVISE_JWT_SECRET_KEY']
+  end
+end
+```    
+-   Add `:jwt_authenticatable` to the `devise` bit of your model.
+-  Require spec helpers using `require 'devise/jwt/test_helpers'` in `spec_helper.rb`
+-   In case you need to write specs with a mocker sign in, you can use a shared context like
+```
+shared_context 'with authenticated admin user' do
+  let(:current_user) { create(:user, confirmed_at: Time.zone.now) }
+    before do
+    headers = { 'Accept' => 'application/json', 'Content-Type' => 'application/json' }
+    auth_headers = Devise::JWT::TestHelpers.auth_headers(headers, current_user)
+    request.headers.merge!(auth_headers)
+  end
+end
+```
+-   With all the configuration done, with the server up, you can login making a request to 127.0.0.1:3000/users/sign_in with form data like
+ ```
+user[email]:eugenio@walker.io
+user[password]:the_password
+```
+And you’ll get a token in headers[:authorization], like `Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTc0NDUxMTUwLCJleHAiOjE1NzQ0NTQ3NTAsImp0aSI6IjU0Mzc5N2E1LWMwZWQtNDM3YS1iZDE4LWM4Njc2OGEyNDIyZiJ9.-DDoju4GPhUtIg65A2GR5T_YOOriopjPW6FZSYlOP8o`
+-   Afterwards, send the authorization header in each request.
+-   If you need a logout, remember to set a revocation strategy. You can decide which one to use based on [this article](http://waiting-for-dev.github.io/blog/2017/01/24/jwt_revocation_strategies/). Read  [the devise-jwt documentation]([this article](http://waiting-for-dev.github.io/blog/2017/01/24/jwt_revocation_strategies/) for information on how to implement each one. Otherwise, add `jwt_revocation_strategy: Devise::JWT::RevocationStrategies::Null` to the devise bit of your model.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
